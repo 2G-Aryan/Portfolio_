@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      background-color: white;
+      justify-content: center;
+      column-gap: 111px;
+      row-gap: 50px;
+      padding: 40px;
+    }
+
+    .skill {
+      height: 110px;
+      width: 200px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 10px 10px 5px rgb(2, 2, 2);
+    }
+
+    .skill img {
+      width: 100px;
+    }
+
+  
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: rgb(0, 0, 0);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: black;
+      border: 4px solid black;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    
+    .left {
+      left: 0;
+    }
+
+    
+    .right {
+      left: 50%;
+    }
+
+   
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid rgb(255, 255, 255);
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+
+    
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    
+    .right::after {
+      left: -16px;
+    }
+
+    
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      border: 2px solid;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 100px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project {
+      border: 2px solid;
+      width: 300px;
+      height: 400px;
+      border-radius: 15px;
+      box-shadow: 12px 12px 20px #ba9d9d;
+    }
+
+    .btn1{
+      padding: 8px;
+    border-radius: 11px;
+    color: white;
+    background-color: #41bfe8;
+    width: 100px;
+    font-size: 16px;
+    margin-left: 87px;
+    margin-top: 88px;
+    }
+
+    .btn1:hover{
+      background-color: black;
+      color: white;
+    }
+
+    .iconslast ul{
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 30px;
+    }
+    .iconslast ul li  img{
+      height: 60px;
+    }
+.firstbtn{
+  background-color: blue;
+  color: white;
+  padding: 8px;
+            border-radius: 15px;
+            border: 2px solid gray;
+            margin-top: 50px;
+}
+
+.firstbtn:hover{
+  background-color: black;
+  color: white;
+}
+
+    nav ul li{
+      color: white;
+    }
+
+    li:hover{
+      background-color: white;
+      color: black;
+      padding: 5px;
+      border-radius: 5px;
+    }
+ .content{
+  box-shadow: 4px 3px 3px #dabcac
+ }
+
+ .projects  h1 p{
+  text-align: center;
+ }
+
+ .btn3 {
+  background-color: blue;
+    color: white;
+ }
+
+ .btn3:hover{
+  background-color: black;
+  color: white;
+ }
+
+
+ /* media tag */
+
+ @media only screen and (max-width: 600px) {
+  
+nav ul{
+  gap: 20px !important;
+}
+
+.one{
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  margin-left: -50px;
+  
+}
+.logo img{
+margin-left: 0px;
+}
+
+.hero{
+  align-items: center;margin-left: 115px;
+}
+
+.skills{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+}
+
+.skill{
+  height: 100px;
+    width: 150px;
+}
+
+.timeline{
+  display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.timeline::after{
+  display: none;
+}
+
+.container::after{
+  display: none;
+}
+
+.content{
+  padding: 0px;
+}
+
+ .left{
+  width: 250px;
+    height: 165px;
+}
+
+ .right{
+  width: 250px;
+    height: 165px;
+    margin-left: -60px;
+}
+
+.projects{
+  grid-template-columns: auto;
+}
+
+.btn3{
+  width: 30% !important;
+}
+}
+  </style>
+</head>
+
+<body>
+  <nav style="
+        background-color: rgb(56, 53, 53);
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      ">
+    <ul style="
+          display: flex;
+          list-style: none;
+          gap: 50px;
+          font-size: 25px;
+          justify-content: center;
+          align-items: center;
+        ">
+      <li>About</li>
+      <li>Skills</li>
+      <li>Project</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+  <div class="one" style="display: flex">
+    <div class="logo" style="width: 40%">
+      <img
+        src="https://img.freepik.com/free-vector/hacker-operating-laptop-cartoon-icon-illustration-technology-icon-concept-isolated-flat-cartoon-style_138676-2387.jpg"
+        alt="logo" style="height: 450px; margin-left: 70px; margin-top: 31px" />
+    </div>
+    <div class="hero" style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+        ">
+      <h1 style="font-family: sans-serif; text-shadow: 3px 4px 3px #dbcaca;">Aryan Upadhyay</h1>
+      <h2 style="color: blue; text-shadow:  4px 3px #dabcac;">Web Devloper|Ui/Ux Designer</h2>
+      <p style="margin-top: 10px;
+    font-family: cursive;">
+        As a passionate and skilled web developer, I am actively seeking new opportunities to contribute my expertise in front-end and back-end development. With a strong background in modern web technologies, I specialize in creating dynamic, user-friendly, and efficient web applications. <br />
+        If you are looking for a dedicated web developer to enhance your team, feel free to connect with me. I am open to both remote and on-site opportunities.
+      </p>
+      <button class="firstbtn" style="box-shadow: 4px 3px 3px #dabcac">
+        Downloads My CV
+      </button>
+    </div>
+  </div>
+  <div style="border: 2px solid black;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 3px #dabcac;
+    ">
+    <p style="font-size: 30px; font-weight: 900; margin-left: 47%; font-family: sans-serif; ">Skills</p>
+    <div class="skills">
+      <div class="skill"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-128.png" alt="">
+      </div>
+      <div class="skill"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png"
+          alt=""></div>
+      <div class="skill"><img
+          src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png"
+          alt=""></div>
+      <div class="skill"><img src="https://cdn0.iconfinder.com/data/icons/logos-brands-in-colors/128/react-512.png"
+          alt=""></div>
+      <div class="skill"><img src="https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="">
+      </div>
+      <div class="skill"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-128.png"
+          alt=""></div>
+      <div class="skill"><img src="https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/jquery-128.png" alt="">
+      </div>
+      <div class="skill"><img src="https://cdn1.iconfinder.com/data/icons/akar-vol-1/24/nextjs-fill-512.png" alt="">
+      </div>
+      <div class="skill"><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
+          alt=""></div>
+      <div class="skill"><img src="https://cdn1.iconfinder.com/data/icons/ionicons-fill-vol-2/512/logo-vercel-512.png"
+          alt=""></div>
+      <div class="skill"><img src="https://cdn4.iconfinder.com/data/icons/logos-3/512/mongodb-2-512.png" alt=""></div>
+      <div class="skill"><img src="https://cdn2.iconfinder.com/data/icons/boxicons-logos/24/bxl-tailwind-css-1024.png"
+          alt=""></div>
+    </div>
+  </div>
+  <h1 style="margin-left: 41%; font-family: sans-serif; margin-top: 30px;">Education Qualification</h1>
+  <div class="timeline">
+
+    <div class="container left">
+      <div class="content">
+        <p style="    background-color: blue;
+        color: white;
+        padding: 4px;
+        font-size: 23px;">Bachelor's of Information Technology</p>
+        <p><br>
+         <b> Institution: </b> Indian Association College <br>
+         <b> Duration: </b> 2022 - 2025  <br>
+         <b> Location: </b> Dombivli   <br>
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <p style="    background-color: blue;
+        color: white;
+        padding: 4px;
+        font-size: 23px;">Higher Secondary Certificate (HSC)</p>
+        <p><br>
+         <b> Institution: </b> SH Jondhale College <br>
+         <b> Duration: </b> 2020 - 2022  <br>
+         <b> Location: </b> Dombivli   <br>
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <p style="    background-color: blue;
+        color: white;
+        padding: 4px;
+        font-size: 23px;">Secondary School Certificate </p>
+        <p><br>
+         <b> Institution: </b> New Cambridge English School  <br>
+         <b> Duration: </b> 2020 <br>
+         <b> Location: </b> Dombivli <br>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+  <h1 style="display: flex
+  ;
+      justify-content: center;
+      font-size: 45px;
+      padding: 50px; font-family: sans-serif; " >Projects</h1>
+  <div class="projects">
+    <div class="project"><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png"
+        alt="spotify" style="width: 150px; margin-left: 21%;">
+        <h1>Netflix Clone</h1>
+        <p>By Using HTML and CSS</p>
+        <button class="btn1">Show</button>
+      </div>
+    <div class="project"><img src="Screenshot 2024-12-12 154901.png" style="width: 288px;
+    height: 161px;
+    border-radius: 14px;
+    margin-left: 3px;
+      margin-top: 3px;">
+        <h1>App Growth Hub</h1>
+        <p>By Using React JS</p>
+      <button class="btn1">Show</button></div>
+    <div class="project"><img src="Screenshot 2024-12-13 154916.png" alt="" style="width: 290px;
+      height: 165px;
+      border-radius: 14px;
+      margin-left: 3px;
+      margin-top: 3px;">
+        <h1>Interior Designer</h1>
+        <p>By Using Next JS</p>
+      <button class="btn1">Show</button></div>
+    <div class="project"><img src="Screenshot 2024-12-19 191806.png" alt="" style="width: 290px;
+      height: 165px;
+      border-radius: 14px;
+      margin-left: 3px;
+      margin-top: 3px;">
+        <h1>Netflix Clone</h1>
+        <p>By Using HTML and CSS</p>
+<button class="btn1">Show</button>
+    </div>
+    <div class="project"><img src="image1.png" alt="" style="width: 130px;
+      height: 190px;
+      border-radius: 23px;
+      margin-left: 25%;
+      margin-top: 10px;">
+        <h1>Book Your Tickets</h1>
+        <p>By Using HTML and CSS and JS</p>
+    <button class="btn1" style="margin-top: 62px;">Show</button>  
+    </div>
+    <div class="project" ><img src="image.png" alt=""  style="width: 290px;
+      height: 165px;
+      border-radius: 14px;
+      margin-left: 3px;
+      margin-top: 3px;">
+      <h1>Top Up Website</h1>
+      <p>By Using Bootstrap</p>
+    <button class="btn1">Show</button>  
+    </div>
+  </div>
+  <div class="contact" style="    display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 80px;">
+    <h1 style="font-family: sans-serif; ">Contact Me</h1>
+    <input type="text" placeholder="Enter your name" required style="width: 50%; height: 70px; border-radius: 10px; padding: 20px; font-size: 25px; "><br>
+    <input type="text" placeholder="Enter your mail" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px; font-size: 25px;"><br>
+    <input type="text" placeholder="Enter your message" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px; font-size: 25px;"><br>
+    <button style="
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    height: 50px;
+    width: 10%;
+    font-size: 25px;
+  " class="btn3">Submit</button>
+  </div>
+
+  <hr style="border: 2px solid black;
+  margin-top: 40px;
+  margin-bottom: 20px;">
+
+  <div class="iconslast">
+ <ul>
+  <li><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-512.png" alt=""></li>
+  <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png" alt=""></li>
+  <li><img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/instagram_icon-instagram_buttoninstegram-1024.png" alt=""></li>
+  <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-512.png" alt=""></li>
+ </ul>
+  </div>
+</body>
+
+</html>
