@@ -314,6 +314,11 @@ input{
 }
 
 }
+
+a{
+  color: white;
+  text-decoration: none;
+}
   </style>
 </head>
 
@@ -332,11 +337,12 @@ input{
           font-size: 25px;
           justify-content: center;
           align-items: center;
+          
         ">
       <li>About</li>
-      <li>Skills</li>
-      <li>Project</li>
-      <li>Contact</li>
+      <li style="text-decoration: none;"><a href="#Skill">Skills</a></li>
+      <li style="text-decoration: none;"><a href="#Project">Project</a></li>
+      <li style="text-decoration: none; color: #ffffff;"><a href="#Contact">Contact</a></li>
     </ul>
   </nav>
   <div class="one" style="display: flex">
@@ -372,7 +378,7 @@ input{
     box-shadow: 4px 3px 3px #dabcac;
     ">
     <p style="font-size: 30px; font-weight: 900; margin-left: 47%; font-family: sans-serif; ">Skills</p>
-    <div class="skills">
+    <div class="skills" id="Skill">
       <div class="skill"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-128.png" alt="">
       </div>
       <div class="skill"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png"
@@ -450,7 +456,7 @@ input{
   ;
       justify-content: center;
       font-size: 45px;
-      padding: 50px; font-family: sans-serif; " >Projects</h1>
+      padding: 50px; font-family: sans-serif; " id="Project" >Projects</h1>
   <div class="projects">
     <div class="project"><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png"
         alt="spotify" style="width: 150px; margin-left: 21%;">
@@ -508,7 +514,7 @@ input{
       align-items: center;
       gap: 10px;
       margin-top: 80px;">
-    <h1 style="font-family: sans-serif; ">Contact Me</h1>
+    <h1 style="font-family: sans-serif; " id="Contact">Contact Me</h1>
     <input type="text" placeholder="Enter your name" required style="width: 50%; height: 70px; border-radius: 10px; padding: 20px;  "><br>
     <input type="text" placeholder="Enter your mail" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px;"><br>
     <input type="text" placeholder="Enter your message" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px;"><br>
