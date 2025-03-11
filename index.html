@@ -12,14 +12,67 @@
       box-sizing: border-box;
     }
 
- html, body {
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden; 
-    margin: 0;
-    padding: 0;
+      html, body {
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      margin: 0;
+      padding: 0;
+  }
+
+  nav{
+    background-color: rgb(56, 53, 53);
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+  }
+ 
+  nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+nav ul li a:hover{
+  color: black;
 }
-    
+
+  .logo img{
+    height: 450px;
+    margin-left: 70px;
+    border-radius: 500px;
+    margin-top: 31px;
+  }
+
+  .logo img:hover{
+    transform: rotate(360deg);
+    transition: 2s;
+  }
+
+  .hero{
+    display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+  }
+
+.box{
+  border: 2px solid black;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 3px #dabcac;
+}
+
+.box:hover{
+  transform: scale(0.9);
+  transition: 3s;
+}
+
     .skills {
       display: grid;
       grid-template-columns: auto auto auto auto;
@@ -40,6 +93,13 @@
       justify-content: center;
       align-items: center;
       box-shadow: 10px 10px 5px rgb(2, 2, 2);
+    }
+
+    .skill:hover{
+      transform: rotateY(360deg);
+      transition: 1s ease-out;
+      background-color: blue;
+      color: white;
     }
 
     .skill img {
@@ -156,6 +216,11 @@
       box-shadow: 12px 12px 20px #ba9d9d;
     }
 
+    .project:hover{
+      transform: scale(1.1);
+  transition: 3s;
+    }
+
     .btn1{
       padding: 8px;
     border-radius: 11px;
@@ -196,6 +261,8 @@
 .firstbtn:hover{
   background-color: black;
   color: white;
+  transform: scale(1.1);
+  transition: 0.8s;
 }
 
     nav ul li{
@@ -216,10 +283,6 @@
   text-align: center;
  }
 
-input{
-  font-size: 25px;
-}
-
  .btn3 {
   background-color: blue;
     color: white;
@@ -239,11 +302,6 @@ nav ul{
   gap: 20px !important;
 }
 
-.logo img{
-  margin-left: 0px;
-}
-
-
 .one{
   display: flex;
   flex-direction: column;
@@ -257,8 +315,8 @@ nav ul{
 margin-left: 0px;
 }
 
-.firstbtn{
-  margin: 35px;
+.hero{
+  align-items: center;margin-left: 115px;
 }
 
 .skills{
@@ -297,7 +355,7 @@ margin-left: 0px;
 
  .right{
   width: 250px;
-    height: 200px;
+    height: 165px;
     margin-left: -60px;
 }
 
@@ -308,28 +366,12 @@ margin-left: 0px;
 .btn3{
   width: 30% !important;
 }
-
-input{
-  font-size: small !important;
-}
-
-}
-
-a{
-  color: white;
-  text-decoration: none;
 }
   </style>
 </head>
 
 <body>
-  <nav style="
-        background-color: rgb(56, 53, 53);
-        height: 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      ">
+  <nav>
     <ul style="
           display: flex;
           list-style: none;
@@ -337,27 +379,20 @@ a{
           font-size: 25px;
           justify-content: center;
           align-items: center;
-          
         ">
-      <li>About</li>
-      <li style="text-decoration: none;"><a href="#Skill">Skills</a></li>
-      <li style="text-decoration: none;"><a href="#Project">Project</a></li>
-      <li style="text-decoration: none; color: #ffffff;"><a href="#Contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skill">Skills</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   <div class="one" style="display: flex">
     <div class="logo" style="width: 40%">
       <img
         src="https://img.freepik.com/free-vector/hacker-operating-laptop-cartoon-icon-illustration-technology-icon-concept-isolated-flat-cartoon-style_138676-2387.jpg"
-        alt="logo" style="height: 450px;  margin-top: 31px" />
+        alt="logo"/>
     </div>
-    <div class="hero" style="
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          
-        ">
+    <div class="hero" id="about">
       <h1 style="font-family: sans-serif; text-shadow: 3px 4px 3px #dbcaca;">Aryan Upadhyay</h1>
       <h2 style="color: blue; text-shadow:  4px 3px #dabcac;">Web Devloper|Ui/Ux Designer</h2>
       <p style="margin-top: 10px;
@@ -366,19 +401,13 @@ a{
         If you are looking for a dedicated web developer to enhance your team, feel free to connect with me. I am open to both remote and on-site opportunities.
       </p>
       <button class="firstbtn" style="box-shadow: 4px 3px 3px #dabcac">
-        Downloads My CV  
+        Downloads My CV
       </button>
     </div>
   </div>
-  <div style="border: 2px solid black;
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 4px 3px 3px #dabcac;
-    ">
+  <div class="box">
     <p style="font-size: 30px; font-weight: 900; margin-left: 47%; font-family: sans-serif; ">Skills</p>
-    <div class="skills" id="Skill">
+    <div class="skills" id="skill">
       <div class="skill"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-128.png" alt="">
       </div>
       <div class="skill"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png"
@@ -456,8 +485,8 @@ a{
   ;
       justify-content: center;
       font-size: 45px;
-      padding: 50px; font-family: sans-serif; " id="Project" >Projects</h1>
-  <div class="projects">
+      padding: 50px; font-family: sans-serif; " >Projects</h1>
+  <div class="projects" id="project">
     <div class="project"><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png"
         alt="spotify" style="width: 150px; margin-left: 21%;">
         <h1>Netflix Clone</h1>
@@ -508,16 +537,16 @@ a{
     <button class="btn1">Show</button>  
     </div>
   </div>
-  <div class="contact" style="    display: flex;
+  <div class="contact" id="contact" style="    display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
       gap: 10px;
       margin-top: 80px;">
-    <h1 style="font-family: sans-serif; " id="Contact">Contact Me</h1>
-    <input type="text" placeholder="Enter your name" required style="width: 50%; height: 70px; border-radius: 10px; padding: 20px;  "><br>
-    <input type="text" placeholder="Enter your mail" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px;"><br>
-    <input type="text" placeholder="Enter your message" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px;"><br>
+    <h1 style="font-family: sans-serif; ">Contact Me</h1>
+    <input type="text" placeholder="Enter your name" required style="width: 50%; height: 70px; border-radius: 10px; padding: 20px; font-size: 25px; "><br>
+    <input type="text" placeholder="Enter your mail" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px; font-size: 25px;"><br>
+    <input type="text" placeholder="Enter your message" required style="width: 50%; height: 70px; border-radius: 10px;  padding: 20px; font-size: 25px;"><br>
     <button style="
     padding: 8px;
     border-radius: 5px;
